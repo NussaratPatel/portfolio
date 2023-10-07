@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <h1 style="color: aqua;">Nussarat Patel</h1>
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+            </div>
+    </nav>       
+    </header>
+    <section id="home" >
+        <div class="sect">
+            <h1 style="color: rgb(67, 160, 5);">Hello <br>I'am Nussarat</h1>
+             <img src="j2.webp" style="height: 300px; margin-right: 100px;width: 500px;">
+         </div>
+     </section>
+
+    <hr style="background-color: bisque;" >
+
+    <section id="about">
+        <div class="section">
+            <img src="j2.jpg" alt="" style="margin-left: 80px;"/>
+               <div class="text" style="position: absolute;right: 800px;width: 30px;">
+                  <h1 style="color: rgb(102, 104, 3);text-align: center;"><u>About</u></h1>
+                     <p style="width: 700px; padding: 0.63rem; border-radius: 30px;border-color: brown;background-color: rgb(95, 65, 25);font-size: large;">I'am Nussarat Patel.I am first year student at Government College Of engineering College,Karad.I have Completed My Bachelor's degree in Computer Science.
+                     I have built project named Online Transport System in C# using SQL.It is
+                     Currently I am doing an internship as web developer in CodSoft.I am intrested
+                     in learning new things.I am a quick learner as well as a team worker.I am creative and logical thinker and I beleive
+                     these traits make me push my boundries and give me never give up attitude.Thank You!
+                    </p>
+                 </div>
+        </div>
+        <div class="list" style="display: flex;justify-content: space-between;">
+            <div>
+                <ul class="tabs-content" style="margin-left: 400px;font-size:large;">
+                    <li>Web Development-Java,<br>C#,C++,HTML,CSS,Java Script</li>
+                    <li>Quick Learner,Team Worker,<br>Hard Working,Creative</li>
+                    <li>2022-Current:GCE,Karad,<br>2019-2022:K.R.P,Islampur<br>2017-2019:M.G.V,Ashta</li>
+                </ul>
+               </div>
+            <div>
+             <ul class="tabs" style="margin-right: 100px;font-size:large;cursor: pointer;color: aqua;">
+                 <li>Technical Skills</li>
+                 <li>Soft Skills</li>
+                 <li>Education</li>
+             </ul>
+            </div>
+        </div> 
+    </section>
+    <hr style="background-color: bisque;">
+    <div class="con" style="display:flex;justify-content: space-between;">
+    <div class="txt">
+    <h1 style="text-align:left;"><u>Contact Me</u></h1> 
+    <p><img src="ph7.png" style="height: 20px;"/>&nbsp;  78486384969<br><br><img src="gm1.png" style="height: 20px;"/> &nbsp; example01@gmail.com</p>
+    <p><a href="https://www.linkedin.com/in/nussarat-patel-ab5050263/"><img src="in5.jpg"></a></p>
+    <p style="color: black;"><a href ="NusratCV.pdf" attributes-list download>Download My CV</a></p>
+</div>
+    <section id="contact"> 
+               
+        <form  name="submit-to-google-sheet"       style="text-align: 
+        right;background-color:transparent;width: 330px;height: 180px;">
+            Enter Name: <input type="text" name="name"  placeholder="Enter name" style="width: 220px;"><br><br>
+            Enter Mobile No:<input type="number" name="number" placeholder="Enter your mobile no"><br><br>
+            <textarea name="Message" rows="7"  placeholder="Any Message" style="height: 50px;width: 300px;"></textarea><br><br>
+            <input type="submit" value="Submit" name="submit"><br><br>
+        </form>
+        <!-- <span id="msg"></span> -->
+    </div>
+    <span id="msg"></span>
+    </section>
+    <footer>
+        <p>
+            &copy; 2023 Nussarat
+        </p>
+    </footer>
+    <script>
+        $(function () {
+
+var $tab_contents = $('.tabs-content li'),
+    $tab_buttons = $('.tabs li');
+
+$('.tabs').on('click', 'li', function (e) {
+  var $current = $(e.currentTarget),
+      index = $current.index();
+  
+  $tab_buttons.removeClass('active-tab');
+  $current.addClass('active-tab');
+  $tab_contents.hide().eq(index).show();
+   });
+});
+            
+    </script>
+    <script>
+        $("#button").click(function(){
+        var name = document.getElementById("name");
+        var s = name.value;
+        console.log(s);
+    });
+    </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx5BY7uMVLVs9MJUnqJubPbFmLzH8tpiYy8YrNEGii_AxbaHl4q2F-HHHao4kDO9ZS1/exec'
+    const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>

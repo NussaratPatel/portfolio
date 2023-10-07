@@ -1,0 +1,98 @@
+body{
+    margin: auto;
+    padding: 0;
+    background-color: rgb(252, 168, 199);
+}
+header{
+    background-color: rgb(253, 109, 153);
+    color: rgb(230, 178, 198);
+    /* padding: 20px; */
+    
+}
+nav ul{
+    list-style: none;
+    text-align: right;
+}
+nav ul li{
+    display: inline;
+    margin-right: 20px;
+    font-size: large;
+}
+
+nav a{
+    text-decoration: none;
+    color: blanchedalmond;
+    font-weight: bold;
+}
+section{
+    padding: 20px;
+    height: 190px;
+}
+section#about{
+    color: rgb(177, 162, 3);
+    height: 400px;
+}
+.section{
+    background-color:transparent;
+    display:flex;
+    justify-content: space-between;
+}
+.sect{
+    display:flex;
+    justify-content: space-between;
+}
+.section {
+    height: 200px;
+    margin-left: 30px;
+}
+.section h1{
+    margin: 0;
+    color: rgb(74, 122, 2);
+}
+.section{
+    color: #c0bdbd;
+}
+
+section#home{
+    color: palegoldenrod;
+    height: 300px;
+}
+.tabs {
+    list-style: none;
+  }
+  
+  .tabs .active-tab {
+    color: black;
+  }
+  
+  /* .tabs li {
+    display: inline-block;
+    cursor: pointer;
+    color:aqua;
+  } */
+  
+  .tabs-content {
+    list-style: none;
+  }
+  
+  .tabs-content li {
+    display: none;
+  }
+  
+footer{
+    background-color: rgb(124, 13, 65);
+    color: blanchedalmond;
+    text-align: center;
+    padding: 10px;
+}
+section#contact{
+    display: flex;
+    height: 250px;
+    
+}
+#msg{
+    color: #092b03;
+    margin-top: -40px;
+    display: block;
+    text-align: end;
+}
